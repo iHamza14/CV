@@ -1,0 +1,162 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #92837b;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #000000f1;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transform: scale(1.3);
+  transform-origin: top center;
+}
+
+.form-section,
+.preview-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+}
+
+.form-section{
+  background: linear-gradient(135deg, hsl(227, 15%, 88%), #baaca9); /* your gradient */
+}
+
+.preview-section{
+  background: white;
+}
+
+.form-section:hover,
+.preview-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.form-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  border-left: 5px solid #745852;
+  padding-left: 8px;
+  color: #2c3e50;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 95%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fdfdfd;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37,117,252,0.3);
+}
+
+.form-section textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.preview-section {
+  margin: 0 auto;
+  padding: 60px 80px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  font-family: "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #aa2b2b; 
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+.preview-section h1,
+.preview-section h2,
+.preview-section h3,
+.preview-section p {
+  margin: 0 0 12px 0;
+}
+
+.preview-section h1 {
+  font-size: 1.3rem;
+  color: #000;
+  text-align: left;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #000;
+}
+
+.preview-section h2 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+  margin: 28px 0 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.preview-section p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: pre-line;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1);
+  }
+  .form-section, .preview-section {
+    width: 100%;
+    max-width: 600px;
+  }
+}
